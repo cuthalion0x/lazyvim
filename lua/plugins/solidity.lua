@@ -18,7 +18,12 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        solidity = {},
+        -- disable old solidity LSP
+        solidity = {
+          autostart = false,
+        },
+        -- enable better solidity LSP (hardhat/foundry integration)
+        solidity_ls_nomicfoundation = {},
       },
     },
   },
