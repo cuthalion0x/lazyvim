@@ -9,7 +9,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
       if type(opts.ensure_installed) == "table" then
-        vim.list_extend(opts.ensure_installed, { "solidity" })
+        vim.list_extend(opts.ensure_installed, { "cairo", "solidity" })
       end
     end,
   },
@@ -18,6 +18,8 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        -- add cairo
+        cairo_ls = {},
         -- disable old solidity LSP
         solidity = {
           autostart = false,
