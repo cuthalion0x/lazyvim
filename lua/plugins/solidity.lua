@@ -5,6 +5,7 @@
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
+  -- both solidity and cairo have treesitter support
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
@@ -14,6 +15,7 @@ return {
     end,
   },
 
+  -- configure language servers
   {
     "neovim/nvim-lspconfig",
     opts = {
@@ -30,7 +32,7 @@ return {
     },
   },
 
-  -- also add vyper
+  -- also add vyper plugin - no language server or treesitter support
   {
     "vyperlang/vim-vyper",
   },
