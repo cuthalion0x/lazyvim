@@ -6,7 +6,25 @@
 -- * override the configuration of LazyVim plugins
 return {
   {
+    "ellisonleao/gruvbox.nvim",
+    opts = { contrast = "hard" },
+  },
+  {
     "folke/tokyonight.nvim",
     opts = { style = "night" },
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    opts = {
+      theme = "wave",
+      background = {
+        dark = "wave",
+        light = "lotus",
+      },
+    },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = { colorscheme = "tokyonight" },
   },
 }
